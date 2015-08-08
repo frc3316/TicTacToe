@@ -18,12 +18,14 @@ public class GameEngine implements Symbol
 			//player1 = new ??? (X);
 			//player2 = new ??? (O);
 			player1Turn = true;
+			System.out.println("Starting player is " + player1);
 		}
 		else
 		{
 			//player1 = new ??? (O);
 			//player2 = new ??? (X);
 			player1Turn = false;
+			System.out.println("Starting player is " + player2);
 		}
 		
 		Player currentPlayer = null;
@@ -36,9 +38,16 @@ public class GameEngine implements Symbol
 			
 			BoardPosition next = currentPlayer.playTurn(new Board(board));
 			
-			if (board.arr[next.x][next.y] != EMPTY)
+			if (	next.x > 2 || 
+					next.y > 2 || 
+					next.x < 0 || 
+					next.y < 0)
 			{
-				System.out.println(currentPlayer + " lost because he played an illegal move");
+				System.out.println(currentPlayer + " lost because he tried playing outside of the board");
+			}
+			else if (board.arr[next.x][next.y] != EMPTY)
+			{
+				System.out.println(currentPlayer + " lost because he tried playing in an already taken space");
 				break;
 			}
 			else
