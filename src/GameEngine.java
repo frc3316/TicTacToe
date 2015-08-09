@@ -6,9 +6,6 @@ public class GameEngine implements Symbol
 		Player player1 = null;
 		Player player2 = null;
 		
-		player1.setName();
-		player2.setName();
-		
 		boolean player1Turn;
 		
 		Board board = new Board();
@@ -27,6 +24,9 @@ public class GameEngine implements Symbol
 			player1Turn = false;
 			System.out.println("Starting player is " + player2);
 		}
+		
+		player1.setName();
+		player2.setName();
 		
 		Player currentPlayer = null;
 		
