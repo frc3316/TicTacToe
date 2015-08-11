@@ -3,13 +3,13 @@
  * @author Idan
  *
  */
-public class BoardPosition
+public class BoardMove
 {
 	public int x;
 	public int y;
 	public int symbol;
 	
-	public BoardPosition (int x, int y, int symbol)
+	public BoardMove (int x, int y, int symbol)
 	{
 		this.x = x;
 		this.y = y;

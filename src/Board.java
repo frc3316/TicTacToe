@@ -41,7 +41,7 @@ public class Board implements Symbol
 		}
 	}
 	
-	public void insert (BoardPosition bp)
+	public void insert (BoardMove bp)
 	{
 		arr[bp.x][bp.y] = bp.symbol;
 	}

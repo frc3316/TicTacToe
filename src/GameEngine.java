@@ -36,7 +36,7 @@ public class GameEngine implements Symbol
 			
 			currentPlayer = player1Turn ? player1 : player2;
 			
-			BoardPosition next = currentPlayer.playTurn(new Board(board));
+			BoardMove next = currentPlayer.playTurn(new Board(board));
 			
 			if (	next.x > 2 || 
 					next.y > 2 || 

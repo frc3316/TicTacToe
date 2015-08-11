@@ -23,7 +23,7 @@ public abstract class Player implements Symbol
 	 * @param board The current board state. This board is a copy of the current board, so it can be changed without harming the game.
 	 * @return The position where the player wants to play. A player can not play in a position that is already filled (i.e. not 0). 
 	 */
-	public abstract BoardPosition playTurn (Board board);
+	public abstract BoardMove playTurn (Board board);
 	
 	/**
 	 * Returns the string representation of this player.
