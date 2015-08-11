@@ -51,9 +51,14 @@ public class GameEngine implements Symbol
 				System.out.println(currentPlayer + " lost because he tried playing in an already taken space");
 				break;
 			}
+			else if (next.symbol != currentPlayer.symbol)
+			{
+				System.out.println(currentPlayer + " lost because he tried cheating - placing a symbol that is not his");
+				break;
+			}
 			else
 			{
-				board.arr[next.x][next.y] = currentPlayer.symbol;
+				board.insert(next);
 			}
 			
 			player1Turn = !player1Turn;

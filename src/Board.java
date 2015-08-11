@@ -41,9 +41,9 @@ public class Board implements Symbol
 		}
 	}
 	
-	public void insert (BoardPosition bp, int symbol)
+	public void insert (BoardPosition bp)
 	{
-		arr[bp.x][bp.y] = symbol;
+		arr[bp.x][bp.y] = bp.symbol;
 	}
 	
 	/**
