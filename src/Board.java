@@ -41,6 +41,11 @@ public class Board implements Symbol
 		}
 	}
 	
+	public void insert (BoardPosition bp, int symbol)
+	{
+		arr[bp.x][bp.y] = symbol;
+	}
+	
 	/**
 	 * @return Whether the board is full (has no empty spaces). A player calling this method will always receive false.
 	 */
