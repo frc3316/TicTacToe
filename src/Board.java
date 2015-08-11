@@ -70,25 +70,22 @@ public class Board implements Symbol
 	 */
 	public int winner ()
 	{
-		//System.out.println("Checking if " + this + "\nhas a winner");
 		for (int i = 0; i < arr.length; i++)
 		{
 			if (	arr[i][0] ==  arr[i][1] && 
 					arr[i][1] == arr[i][2] && 
 					arr[i][0] != EMPTY)
 			{
-				//System.out.println("Returned " +  arr[i][0]);
 				return arr[i][0];
 			}
 		}
 		
-		for (int i = 0; i < arr.length; i++)
+		for (int i = 0; i < arr[0].length; i++)
 		{
 			if (	arr[0][i] ==  arr[1][i] && 
 					arr[1][i] == arr[2][i] &&
 					arr[0][i] != EMPTY)
 			{
-				//System.out.println("Returned " +  arr[0][i]);
 				return arr[0][i];
 			}
 		}
@@ -97,7 +94,6 @@ public class Board implements Symbol
 				arr[1][1] == arr[2][2] &&
 				arr[0][0] != EMPTY)
 		{
-			//System.out.println("Returned " +  arr[0][0]);
 			return arr[0][0];
 		}
 		
@@ -105,11 +101,9 @@ public class Board implements Symbol
 				arr[1][1] == arr[0][2] &&
 				arr[2][0] != EMPTY)
 		{
-			//System.out.println("Returned " +  arr[0][0]);
 			return arr[2][0];
 		}
 		
-		//System.out.println("Returned " +  EMPTY);
 		return EMPTY;
 	}
 	
