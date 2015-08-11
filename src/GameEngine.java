@@ -63,7 +63,9 @@ public class GameEngine implements Symbol
 			
 			player1Turn = !player1Turn;
 		}
-		
+			
+		System.out.println(board);
+			
 		if (board.winner() != EMPTY)
 		{
 			System.out.println(currentPlayer + " wins!");
