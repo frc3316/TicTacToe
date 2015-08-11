@@ -30,10 +30,11 @@ public abstract class Player implements Symbol
 	 */
 	public String toString ()
 	{	
-		String s = "";
-		if (symbol == X) s = "X";
-		else if (symbol == O) s = "O";
+		String s = name + " playing as ";
+		if (symbol == X) s += "X";
+		else if (symbol == O) s += "O";
 		
-		return name + " playing as " + s;
+		
+		return s;
 	}
 }

@@ -15,4 +15,9 @@ public class BoardMove
 		this.y = y;
 		this.symbol = symbol;
 	}
+	
+	public String toString ()
+	{
+		return x + ", " + y + ", " + symbol;
+	}
 }

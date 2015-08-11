@@ -12,21 +12,21 @@ public class GameEngine implements Symbol
 		
 		if (Math.random() > 0.5)
 		{
-			//player1 = new ??? (X);
-			//player2 = new ??? (O);
+			player1 = new Idan(X);
+			player2 = new RandomPlayer(O);
 			player1Turn = true;
-			System.out.println("Starting player is " + player1);
 		}
 		else
 		{
-			//player1 = new ??? (O);
-			//player2 = new ??? (X);
+			player1 = new Idan(O);
+			player2 = new RandomPlayer(X);
 			player1Turn = false;
-			System.out.println("Starting player is " + player2);
 		}
 		
 		player1.setName();
 		player2.setName();
+		
+		System.out.println(player1 + " and " + player2);
 		
 		Player currentPlayer = null;
 		
