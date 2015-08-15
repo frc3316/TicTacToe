@@ -3,7 +3,7 @@ public class GameEngine implements Symbol
 	int player1Score = 0, player2Score = 0, totalGames = 0;
 	
 	//Change the number of games here:
-	final int maxGames = 1;
+	final int maxGames = 100;
 	
 	public void runGame() {
 		totalGames++;
@@ -18,13 +18,13 @@ public class GameEngine implements Symbol
 		if (Math.random() > 0.5)
 		{
 			player1 = new Ofir(X);
-			player2 = new RandomPlayer(O);
+			player2 = new CheaterPlayer(O);
 			player1Turn = true;
 		}
 		else
 		{
 			player1 = new Ofir(O);
-			player2 = new RandomPlayer(X);
+			player2 = new CheaterPlayer(X);
 			player1Turn = false;
 		}
 		
@@ -49,21 +49,21 @@ public class GameEngine implements Symbol
 					next.y < 0)
 			{
 				System.out.println("\t" + currentPlayer + " lost because he tried playing outside of the board");
-				if (player1Turn) player1Score++;
+				if (!player1Turn) player1Score++;
 				else player2Score++;
 				break;
 			}
 			else if (board.arr[next.x][next.y] != EMPTY)
 			{
 				System.out.println("\t" + currentPlayer + " lost because he tried playing in an already taken space");
-				if (player1Turn) player1Score++;
+				if (!player1Turn) player1Score++;
 				else player2Score++;
 				break;
 			}
 			else if (next.symbol != currentPlayer.symbol)
 			{
 				System.out.println("\t" + currentPlayer + " lost because he tried cheating - placing a symbol that is not his");
-				if (player1Turn) player1Score++;
+				if (!player1Turn) player1Score++;
 				else player2Score++;
 				break;
 			}
