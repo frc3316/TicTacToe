@@ -113,7 +113,7 @@ public class Board implements Symbol
 	public String toString ()
 	{
 		String toReturn = "";
-		toReturn += "Board containing:\n";
+		toReturn += "\tBoard containing:\n\t";
 		
 		for (int i = 0; i < arr.length; i++)
 		{
@@ -131,7 +131,7 @@ public class Board implements Symbol
 			
 			if (i != (arr.length - 1))
 			{
-				toReturn += "\n";
+				toReturn += "\n\t";
 			}
 		}
 		
