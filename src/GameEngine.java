@@ -17,14 +17,14 @@ public class GameEngine implements Symbol
 		
 		if (Math.random() > 0.5)
 		{
-			player1 = new Ofir(X);
-			player2 = new CheaterPlayer(O);
+			player1 = new KipaDan(X);
+			player2 = new Idan(O);
 			player1Turn = true;
 		}
 		else
 		{
-			player1 = new Ofir(O);
-			player2 = new CheaterPlayer(X);
+			player1 = new KipaDan(O);
+			player2 = new Idan(X);
 			player1Turn = false;
 		}
 		

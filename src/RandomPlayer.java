@@ -32,7 +32,7 @@ public class RandomPlayer extends Player
 		{
 			for (int j = 0; j < board.arr[0].length; j++)
 			{
-				if (board.arr[i][j] == 0)
+				if (board.arr[i][j] == EMPTY)
 				{
 					toReturn.add(new BoardMove(i, j, symbol));
 				}
