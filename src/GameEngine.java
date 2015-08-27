@@ -3,7 +3,7 @@ public class GameEngine implements Symbol
 	int player1Score = 0, player2Score = 0, totalGames = 0;
 	
 	//Change the number of games here:
-	final int maxGames = 100;
+	final int maxGames = 10;
 	
 	public void runGame() {
 		totalGames++;

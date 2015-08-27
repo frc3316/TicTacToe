@@ -17,33 +17,6 @@ public class Idan extends Player
 	{
 		System.out.println(this + " starting a turn!");
 		
-		/*
-		 * Normally with this code, Idan is forced to place his first move at the bottom right corner
-		 * 
-		 * Without it, he calculates and finds that all moves are equal (meaning that against a perfect 
-		 * player they will all lead to a tie), so he chooses the right edge 
-		 * 
-		 * Found out that Ofir can't handle this unusual starting move, so this code is currently disabled
-		 */
-		
-		
-		/*
-		boolean firstTurn = true;
-		
-		for (int i = 0; i < board.arr.length; i++)
-		{
-			for (int j = 0; j < board.arr[0].length; j++)
-			{
-				if (board.arr[i][j] != EMPTY)
-				{
-					firstTurn = false;
-				}
-			}
-		}
-		
-		if (firstTurn) return new BoardMove(2, 2, this.symbol);
-		*/
-		
 		BoardMove[] allMoves = generateAllMoves(board, symbol);
 		int[] scores = new int[allMoves.length];
 		
