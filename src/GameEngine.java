@@ -3,7 +3,7 @@ public class GameEngine implements Symbol
 	int player1Score = 0, player2Score = 0, totalGames = 0;
 	
 	//Change the number of games here:
-	final int maxGames = 100;
+	final int maxGames = 10;
 	
 	public void runGame() {
 		totalGames++;
@@ -17,14 +17,14 @@ public class GameEngine implements Symbol
 		
 		if (Math.random() > 0.5)
 		{
-			player1 = new Ofir(X);
-			player2 = new CheaterPlayer(O);
+			player1 = new KipaDan(X);
+			player2 = new RandomPlayer(O);
 			player1Turn = true;
 		}
 		else
 		{
-			player1 = new Ofir(O);
-			player2 = new CheaterPlayer(X);
+			player1 = new KipaDan(O);
+			player2 = new RandomPlayer(X);
 			player1Turn = false;
 		}
 		
